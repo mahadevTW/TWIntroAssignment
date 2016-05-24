@@ -9,6 +9,21 @@ public class StarGame {
         verticalLine(numberOfStars);
         System.out.println("Right Angle trangle");
         rightTrangle(numberOfStars);
+        System.out.println("Isosceles Triangle");
+        IsoscelesTriangle(numberOfStars);
+    }
+
+    private static void IsoscelesTriangle(int numberOfStars) {
+        for (int i = 1; i <=numberOfStars; i++) {
+            for (int j = 0; j < (numberOfStars-i); j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j <(2*i-1) ;j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
     }
 
     private static void rightTrangle(int numberOfStars) {
