@@ -16,7 +16,26 @@ public class StarGame {
         System.out.println("Diamond with bill");
         diamondWithBill(numberOfStars);
         fizzBuzz(100);
+        System.out.println("Prime Factors of 100");
+        generatePrimeFactors(100);
 
+    }
+
+    private static void generatePrimeFactors(int number) {
+        for (int i = 2; i <number/2 ; i++) {
+            if(isPrime(i) &&number%i == 0){
+                System.out.print(i +" ");
+            }
+        }
+    }
+
+    private static boolean isPrime(int number) {
+
+        for (int i = 2; i < number / 2; i++) {
+            if(number%i == 0)
+                return false;
+        }
+        return true;
     }
 
     private static void fizzBuzz(int number) {
