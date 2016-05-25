@@ -15,7 +15,23 @@ public class StarGame {
         diamond(numberOfStars);
         System.out.println("Diamond with bill");
         diamondWithBill(numberOfStars);
+        fizzBuzz(100);
 
+    }
+
+    private static void fizzBuzz(int number) {
+        for (int i = 1; i <=number ; i++) {
+            if(i%5 == 0 && i%3 == 0){
+                System.out.println("FIZZ BUZZ");
+            }
+            else if (i%3 == 0){
+                System.out.println("FIZZ");
+            }else if (i%5 == 0){
+                System.out.println("BUZZ");
+            }else {
+                System.out.println(i);
+            }
+        }
     }
 
     private static void diamondWithBill(int numberOfStars) {
