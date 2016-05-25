@@ -10,10 +10,61 @@ public class StarGame {
         System.out.println("Right Angle trangle");
         rightTrangle(numberOfStars);
         System.out.println("Isosceles Triangle");
-        IsoscelesTriangle(numberOfStars);
+        isoscelesTriangle(numberOfStars);
+        System.out.println("Diamond");
+        diamond(numberOfStars);
+        System.out.println("Diamond with bill");
+        diamondWithBill(numberOfStars);
+
     }
 
-    private static void IsoscelesTriangle(int numberOfStars) {
+    private static void diamondWithBill(int numberOfStars) {
+        for (int i = 1; i <=numberOfStars; i++) {
+            for (int j = 0; j < (numberOfStars-i); j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j <(2*i-1)-1 ;j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println("BILL");
+        for (int i = 1; i <=numberOfStars; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j <=(numberOfStars-(2*i-1) ) ;j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+    }
+
+    private static void diamond(int numberOfStars) {
+        for (int i = 1; i <=numberOfStars; i++) {
+            for (int j = 0; j < (numberOfStars-i); j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j <(2*i-1) ;j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+       for (int i = 1; i <=numberOfStars; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j <=(numberOfStars-(2*i-1) ) ;j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+
+    }
+
+    private static void isoscelesTriangle(int numberOfStars) {
         for (int i = 1; i <=numberOfStars; i++) {
             for (int j = 0; j < (numberOfStars-i); j++) {
                 System.out.print(" ");
@@ -50,4 +101,5 @@ public class StarGame {
     private static void simpleStar() {
         System.out.println("*");
     }
+
 }
